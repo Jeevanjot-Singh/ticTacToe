@@ -65,11 +65,7 @@ socket.on('GE', function (data) {
     if (data == 'tied') {
         console.log('Game is tied');
     } else {
-        if (!data) {
-            console.log('Game won by first player');
-        } else {
-            console.log('Game won by second player');
-        }
+        !data ? console.log('Game won by first player') : console.log('Game won by second player')
     }
     socket.disconnect();
     process.exit(1);
@@ -77,11 +73,7 @@ socket.on('GE', function (data) {
 
 //check who resigned
 socket.on('RE', function (player) {
-    if (player == 1) {
-        console.log('Game won by first player');
-    } else {
-        console.log('Game won by second player');
-    }
+    player == 1 ? console.log('Game won by first player') : console.log('Game won by second player')
     socket.disconnect();
     process.exit(1);
 });
