@@ -48,7 +48,7 @@ io.on('connection', async function (player) {
         players.length = 0
         players.push(player)
     }
-    console.log(players.length)
+    // console.log(players.length)
     //check if there is 2 players
     if (players.length == 2) {
         let game = new Game({
